@@ -1,1 +1,12 @@
 @import 'core/settings';
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.button {
+    margin-top: 30px;
+}
