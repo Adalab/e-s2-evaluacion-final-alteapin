@@ -3,7 +3,7 @@
 body {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
 }
 
@@ -11,3 +11,8 @@ body {
     margin-top: 30px;
 }
 
+
+.image-size {
+    max-width: 200px;
+    max-height: 200px;
+}

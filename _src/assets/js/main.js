@@ -28,9 +28,9 @@ for (let i = 0; i < data.length; i++) {
     
 
 if (image === null) {
-    list += `<li><h2>${nameShow}</h2><img src="https://via.placeholder.com/210x295/cccccc/666666/?text=TV"></li>`
+    list += `<li><h2>${nameShow}</h2><img class="image-size" src="https://via.placeholder.com/210x295/cccccc/666666/?text=TV"></li>`
 } else {
- list += `<li><h2>${nameShow}</h2><img src=${image.original}></li>`;
+ list += `<li><h2>${nameShow}</h2><img class="image-size" src=${image.original}></li>`;
 }
 
     }
