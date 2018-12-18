@@ -51,8 +51,8 @@ const addFavouriteShow = (event) => {
     currentShow.classList.toggle('add__favourite');
 
     const idItem = document.querySelectorAll('item__list');
-    console.log(idItem);
-    const input = document.querySelectorAll('add__favourite');
+    // const input = document.querySelectorAll('add__favourite');
+
     let itemsArray = localStorage.getItem('items') ? JSON.parse(localStorage.getItem('items')) : [];
     itemsArray.push(idItem);
     localStorage.setItem('items', JSON.stringify(itemsArray));
