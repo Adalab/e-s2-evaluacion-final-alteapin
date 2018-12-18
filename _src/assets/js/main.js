@@ -15,13 +15,9 @@ function showData(event) {
         .then(data => {
             console.log(data);
 
-let list = "";
+let list = '';
     for (let i = 0; i < data.length; i++) {
         const nameShow = data[i].show.name;
-        console.log(nameShow);
-
-
-    for (let i = 0; i < data.length; i++) {
     const imageShow = data[i].show.image;
     if (imageShow === null) {
      list += `<li class="item__list">
@@ -34,11 +30,9 @@ let list = "";
              <img class="image__size" src=${imageShow.original}>
              </li>`;}
  }
- }
+ listEl.innerHTML = list ; selectFavouriteShow ();
+ });
 
- listEl.innerHTML = `${list}` ; selectFavouriteShow ();
-
-});
 };
 
 buttonEl.addEventListener('click', showData);
@@ -58,3 +52,27 @@ const selectFavouriteShow = () => {
         item.addEventListener('click', addFavouriteShow);
     }
 };
+
+//if (saveData) {
+//     const allShowslocal = document.querySelectorAll('.list__item');
+//     console.log('all', allShowslocal);
+
+//     for (let i=0; i < allShowslocal.length; i++) {
+//       // let currentSerie = allShowslocal[i].value;
+//       for(let j=0; j < saveData.length; j++){
+//         if (allShowslocal[i].value === saveData[j]) {
+//           console.log('tengo el elemento', allShowslocal[i].value );
+//           allShowslocal[i].classList.add('list__item--fav');
+//         }
+//       }
+//     }
+//   }
+
+
+//sacar el id / como en name e image
+
+
+//   const saveData = JSON.parse(localStorage.getItem('saveLocal'));
+//   console.log(saveData);
+
+//en la misma función que el fetch

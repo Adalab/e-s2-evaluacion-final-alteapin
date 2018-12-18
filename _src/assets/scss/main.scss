@@ -5,7 +5,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #5FFBF1;
 }
 
 .label {
@@ -19,6 +18,13 @@
     font-family: 'Staatliches', cursive;
     margin-top: 30px;
     margin-left: 16px;
+}
+
+.list {
+list-style-type: none;
+text-decoration: none;
+font-family: 'Staatliches', cursive;
+font-size: 12px;  
 }
 
 
