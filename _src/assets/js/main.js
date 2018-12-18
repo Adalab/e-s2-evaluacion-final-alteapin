@@ -22,7 +22,7 @@ let list = '';
     if (imageShow === null) {
      list += `<li class="item__list">
             <h2>${nameShow}</h2>
-            <img class="image__size" src="https://via.placeholder.com/210x295/cccccc/666666/?text=TV">
+            <img class="image__size" src="https://via.placeholder.com/210x295/FF9671/666666/?text=TV">
             </li>`; 
     } else {
     list += `<li class="item__list">
@@ -31,7 +31,8 @@ let list = '';
              </li>`;}
  }
  listEl.innerHTML = list ; selectFavouriteShow ();
- });
+ 
+});
 
 };
 
