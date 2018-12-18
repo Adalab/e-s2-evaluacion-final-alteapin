@@ -44,21 +44,19 @@ let list = '';
 buttonEl.addEventListener('click', showData);
 
 //LOCAL STORAGE
-
-// localStorage.setItem('localData', JSON.stringify(idShow));
-
-
-
-
 //ADD FAVOURITE
+
 const addFavouriteShow = (event) => {
     const currentShow = event.currentTarget;
     currentShow.classList.toggle('add__favourite');
-//     const currentFavorite = document.querySelectorAll('add__favourite');
-//     console.log(currentFavorite);
-//     for (var i = 0; i < NodeList.values; i++) {
-//         localStorage.setItem('localData', JSON.stringify(currentFavorite));
-// };
+
+    const idItem = document.querySelectorAll('item__list');
+    console.log(idItem);
+    const input = document.querySelectorAll('add__favourite');
+    let itemsArray = localStorage.getItem('items') ? JSON.parse(localStorage.getItem('items')) : [];
+    itemsArray.push(idItem);
+    localStorage.setItem('items', JSON.stringify(itemsArray));
+
 };
 
 
@@ -69,12 +67,5 @@ const selectFavouriteShow = () => {
     }
 };
 
-let savedLocalData = JSON.parse(localStorage.getItem('localData'));
 
-//LOCAL STORAGE
-
-
-
-// savedLocalData.push(idShow); // 
-// Guardar el LocalStorage en la misma function que favoritos
 
