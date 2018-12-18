@@ -18,7 +18,10 @@ function showData(event) {
 let list = '';
     for (let i = 0; i < data.length; i++) {
         const nameShow = data[i].show.name;
-    const imageShow = data[i].show.image;
+        const imageShow = data[i].show.image;
+        let idShow = data[i].show.id;
+        console.log(idShow);
+
     if (imageShow === null) {
      list += `<li class="item__list">
             <h2>${nameShow}</h2>
@@ -54,26 +57,14 @@ const selectFavouriteShow = () => {
     }
 };
 
-//if (saveData) {
-//     const allShowslocal = document.querySelectorAll('.list__item');
-//     console.log('all', allShowslocal);
 
-//     for (let i=0; i < allShowslocal.length; i++) {
-//       // let currentSerie = allShowslocal[i].value;
-//       for(let j=0; j < saveData.length; j++){
-//         if (allShowslocal[i].value === saveData[j]) {
-//           console.log('tengo el elemento', allShowslocal[i].value );
-//           allShowslocal[i].classList.add('list__item--fav');
-//         }
-//       }
-//     }
-//   }
+//LOCAL STORAGE
 
 
-//sacar el id / como en name e image
+
+idShow.push(idShow); // ¿Podría ser el item del for de favoritos?
+localStorage.setItem('localData', JSON.stringify(idShow));
+const savedLocalData = JSON.parse(localStorage.getItem('localData'));
 
 
-//   const saveData = JSON.parse(localStorage.getItem('saveLocal'));
-//   console.log(saveData);
-
-//en la misma función que el fetch
+// Guardar el LocalStorage en la misma function que favoritos
