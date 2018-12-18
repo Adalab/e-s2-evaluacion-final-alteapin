@@ -1,14 +1,24 @@
 @import 'core/settings';
 
-body {
+.body {
     display: flex;
     flex-direction: column;
-    justify-content: left;
+    justify-content: center;
     align-items: center;
+    background-color: #5FFBF1;
+}
+
+.label {
+    font-family: 'Staatliches', cursive;
+    font-size: 18px;
+    margin-left: 32px;
+    margin-right: 16px;
 }
 
 .button {
+    font-family: 'Staatliches', cursive;
     margin-top: 30px;
+    margin-left: 16px;
 }
 
 
@@ -19,5 +29,7 @@ body {
 
 
 .add__favourite {
+    max-width: 300px;
     background-color: pink;
+    border: 3px solid violet;
 }

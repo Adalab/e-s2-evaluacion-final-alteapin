@@ -28,7 +28,7 @@ let list = "";
             <h2>${nameShow}</h2>
             <img class="image__size" src="https://via.placeholder.com/210x295/cccccc/666666/?text=TV">
             </li>`; 
-    }else {
+    } else {
     list += `<li class="item__list">
              <h2>${nameShow}</h2>
              <img class="image__size" src=${imageShow.original}>
@@ -43,6 +43,7 @@ let list = "";
 
 buttonEl.addEventListener('click', showData);
 
+//ADD FAVOURITE
 
 const addFavouriteShow = (event) => {
     const currentShow = event.currentTarget;
